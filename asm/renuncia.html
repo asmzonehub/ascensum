@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Renuncia al Contrato y Liquidez</title>
-    <link rel="icon" type="image/png" href="imagenes/pets_universe.png">
+    <link rel="icon" type="image/png" href="../imagenes/pets_universe.png">
 
     <style>
         /* ======= RESET / SEGURIDAD LAYOUT ======= */
@@ -318,13 +318,13 @@
     <div class="nav-bar">
       <div class="logo-container">
 
-        <a href="" target="_blank" class="logo">
-          <img src="imagenes/Pets_Concilium.png" alt="Logo Concilium">
+        <a href="index.html" target="_blank" class="logo">
+          <img src="../imagenes/Pets_Concilium.png" alt="Logo Concilium">
         </a>
 
 
 
-        <a href="" target="_blank" class="logo-text">Criptovision Marketing Global Ecom</a>
+        <a href="index" target="_blank" class="logo-text">Criptovision Marketing Global Ecom</a>
 
       </div>
       <div class="nav-links">
@@ -368,7 +368,7 @@
 
         <div style="margin-top:60px; margin-bottom:60px;">
 
-                <img src="imagenes/asm.jpg"
+                <img src="../imagenes/asm.jpg"
                 alt="Asm nacido de una comunidad cansada de estafas"
                 style="max-width:550px;
                 width:100%;
@@ -629,15 +629,170 @@ function loadVideo(el) {
                 <div style="margin-top:80px;">
                 <h2>Contrato del Token ASM</h2>
 
-                <p>
-                Este es el contrato oficial del token ASM:<br>
-                0xc16a37ef0066b641a3b64cf892dfde63ecf25f81<br>
-                <br>
-
-                También puedes acceder directamente a su información pública desde DexScreener:<br>
-                https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81
-                </p>
+                
+                <h3>Este es el contrato oficial del token ASM:</h3>
                 </div> 
+
+
+
+
+                <!-- ===================== COMIENZA BOTON COPIAR ===================== -->
+            
+
+
+
+            <div style="
+background:#111;
+padding:15px;
+border-radius:12px;
+text-align:center;
+margin-top:20px;
+width:60%;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+">
+
+<span id="refContrato" style="
+color:#FBFF00;
+font-size:16px;
+word-break:break-all;
+display:block;
+margin-bottom:15px;
+">
+0xc16a37ef0066b641a3b64cf892dfde63ecf25f81
+</span>
+
+<button onclick="copiarContrato()" style="
+background:#378B18;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+">
+📋 Copiar Contrato
+</button>
+
+<p id="mensajeContrato" style="
+color:#00ff88;
+margin-top:10px;
+display:none;
+font-weight:bold;
+">
+✅ Contrato copiado correctamente
+</p>
+
+</div>
+
+<script>
+function copiarContrato() {
+
+const texto =
+document.getElementById("refContrato").innerText;
+
+navigator.clipboard.writeText(texto);
+
+document.getElementById("mensajeContrato").style.display = "block";
+
+setTimeout(() => {
+document.getElementById("mensajeContrato").style.display = "none";
+}, 2500);
+
+}
+</script>
+
+
+        <!-- ===================== FIN DEL BOTON COPIAR ===================== -->
+        
+
+
+
+
+                 <div style="margin-top:100px;">
+                <h3>También puedes acceder directamente a su información pública desde DexScreener:</h3>
+                <div>
+                
+
+
+
+
+            <!-- ===================== COMIENZA BOTON COPIAR ===================== -->
+            
+
+
+
+            <div style="
+background:#111;
+padding:15px;
+border-radius:12px;
+text-align:center;
+margin-top:20px;
+width:80%;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+">
+
+
+<span id="refLink" style="
+color:#FBFF00;
+font-size:16px;
+word-break:break-all;
+display:block;
+margin-bottom:15px;
+">
+https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81
+</span>
+
+<button onclick="copiarLink()" style="
+background:#378B18;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+">
+📋 Copiar Link
+</button>
+
+<p id="mensajeLink" style="
+color:#00ff88;
+margin-top:10px;
+display:none;
+font-weight:bold;
+">
+✅ Link copiado correctamente
+</p>
+
+</div>
+
+<script>
+function copiarLink() {
+
+const texto =
+document.getElementById("refLink").innerText;
+
+navigator.clipboard.writeText(texto);
+
+document.getElementById("mensajeLink").style.display = "block";
+
+setTimeout(() => {
+document.getElementById("mensajeLink").style.display = "none";
+}, 2500);
+
+}
+</script>
+
+
+        <!-- ===================== FIN DEL BOTON COPIAR ===================== -->
+
 
 
 
@@ -662,7 +817,7 @@ function loadVideo(el) {
 
                  <div style="margin-top:40px; margin-bottom:100px;">
 
-    <img src="imagenes/Dexscreener_1.1.png"
+    <img src="../imagenes/Dexscreener_1.1.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:700px;
                 width:100%;
@@ -716,7 +871,7 @@ function loadVideo(el) {
 
                 <div style="margin-top:20px; margin-bottom:80px;">
 
-    <img src="imagenes/Dexscreener_1.png"
+    <img src="../imagenes/Dexscreener_1.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:400px;
                 width:100%;
@@ -775,7 +930,7 @@ function loadVideo(el) {
 
                              <div style="margin-top:40px; margin-bottom:80px;">
 
-    <img src="imagenes/Dexscreener_2.jpg"
+    <img src="../imagenes/Dexscreener_2.jpg"
          alt="Como verificar un contrato en bscscan"
          style="max-width:400px;
                 width:100%;
@@ -822,7 +977,7 @@ function loadVideo(el) {
 
                 <div style="margin-top:40px; margin-bottom:80px;">
 
-    <img src="imagenes/Dexscreener_3.png"
+    <img src="../imagenes/Dexscreener_3.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:400px;
                 width:100%;
@@ -863,7 +1018,7 @@ function loadVideo(el) {
 
                 <div style="margin-top:40px;">
 
-    <img src="imagenes/Dexscreener_4.png"
+    <img src="../imagenes/Dexscreener_4.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:400px;
                 width:100%;
@@ -884,7 +1039,7 @@ function loadVideo(el) {
 
                 <div style="margin-bottom:80px;">
 
-    <img src="imagenes/Dexscreener_5.png"
+    <img src="../imagenes/Dexscreener_5.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:400px;
                 width:100%;
@@ -1015,7 +1170,7 @@ function loadVideo(el) {
 
                  <div style="margin-top:40px; margin-bottom:80px;">
 
-    <img src="imagenes/bscscan_1.png"
+    <img src="../imagenes/bscscan_1.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:800px;
                 width:100%;
@@ -1052,7 +1207,7 @@ function loadVideo(el) {
 
                 <div style="margin-top:60px; margin-bottom:80px;">
 
-    <img src="imagenes/bscscan_2.png"
+    <img src="../imagenes/bscscan_2.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:900px;
                 width:100%;
@@ -1084,7 +1239,7 @@ function loadVideo(el) {
 
                 <div style="margin-top:40px; margin-bottom:80px;">
 
-    <img src="imagenes/bscscan_3.png"
+    <img src="../imagenes/bscscan_3.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:900px;
                 width:100%;
@@ -1126,7 +1281,7 @@ function loadVideo(el) {
 
                 <div style="margin-top:40px; margin-bottom:80px;">
 
-    <img src="imagenes/bscscan_4.png"
+    <img src="../imagenes/bscscan_4.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:900px;
                 width:100%;
@@ -1162,7 +1317,7 @@ function loadVideo(el) {
 
                 <div style="margin-top:40px; margin-bottom:80px;">
 
-    <img src="imagenes/bscscan_5.png"
+    <img src="../imagenes/bscscan_5.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:900px;
                 width:100%;
@@ -1202,7 +1357,7 @@ function loadVideo(el) {
 
                    <div style="margin-top:40px; margin-bottom:40px;">
 
-    <img src="imagenes/bscscan_6.png"
+    <img src="../imagenes/bscscan_6.png"
          alt="Como verificar un contrato en bscscan"
          style="max-width:900px;
                 width:100%;
@@ -1362,7 +1517,7 @@ Reemplazar TU_LINK_AQUI
 <div class="cta-container">
 
     <!-- BOTÓN -->
-    <a href="https://wa.link/tikzvz" target="_blank" rel="noopener noreferrer" class="cta-pro" id="ctaPro">
+    <a href="https://wa.link/gc8hqf" target="_blank" rel="noopener noreferrer" class="cta-pro" id="ctaPro">
 
         <!-- TEXTO DEL BOTÓN -->
         <span>Quiero comprar mi primer Nodo y comenzar</span>
@@ -1796,7 +1951,7 @@ function loadVideo(el) {
             <div class="left">© Copyright 2026 - All Rights Reserved - Criptovision Marketing Global Ecom</div>
             <div class="right">
                 <a href="https://t.me/nodos_ascensum" target="_blank" rel="noopener noreferrer">Telegram</a>
-                <a href="https://wa.link/tikzvz" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+                <a href="https://wa.link/gc8hqf" target="_blank" rel="noopener noreferrer">Whatsapp</a>
                 
             </div>
         </div>
