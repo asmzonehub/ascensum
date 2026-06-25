@@ -2233,6 +2233,14 @@ font-family:monospace;
 
 </div>
 
+<!-- BOTON DEXSCREENER -->
+<button onclick="abrirDex()" class="btnDex">
+📈 Ver Token en DexScreener
+</button>
+
+<!-- ESPACIO -->
+<div style="height:15px;"></div>
+
 <!-- BOTON BSC -->
 <button onclick="abrirContrato()" class="btnContrato">
 🔗 Ver Contrato en BscScan
@@ -2241,13 +2249,6 @@ font-family:monospace;
 <!-- ESPACIO -->
 <div style="height:15px;"></div>
 
-<!-- BOTON DEXSCREENER -->
-<button onclick="abrirDex()" class="btnDex">
-📈 Ver Token en DexScreener
-</button>
-
-<!-- ESPACIO -->
-<div style="height:15px;"></div>
 
 <!-- BOTON TUTORIAL -->
 <button onclick="abrirTutorial()" class="btnTutorial">
@@ -2258,8 +2259,8 @@ font-family:monospace;
 
 <style>
 
-.btnContrato,
 .btnDex,
+.btnContrato,
 .btnTutorial{
 width:100%;
 max-width:400px;
@@ -2272,19 +2273,6 @@ cursor:pointer;
 transition:all 0.3s ease;
 letter-spacing:0.5px;
 color:white;
-}
-
-/* BOTON BSC */
-
-.btnContrato{
-background:linear-gradient(135deg,#46b51f,#2f7e15);
-box-shadow:0 6px 18px rgba(55,139,24,0.35);
-}
-
-.btnContrato:hover{
-transform:translateY(-3px) scale(1.03);
-box-shadow:0 10px 25px rgba(55,139,24,0.55);
-background:linear-gradient(135deg,#52d323,#378B18);
 }
 
 /* BOTON DEX */
@@ -2300,6 +2288,19 @@ box-shadow:0 10px 25px rgba(24,92,139,0.55);
 background:linear-gradient(135deg,#2790e8,#1c5f9e);
 }
 
+/* BOTON BSC */
+
+.btnContrato{
+background:linear-gradient(135deg,#46b51f,#2f7e15);
+box-shadow:0 6px 18px rgba(55,139,24,0.35);
+}
+
+.btnContrato:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 10px 25px rgba(55,139,24,0.55);
+background:linear-gradient(135deg,#52d323,#378B18);
+}
+
 /* BOTON TUTORIAL */
 
 .btnTutorial{
@@ -2313,8 +2314,8 @@ box-shadow:0 10px 25px rgba(230,126,0,0.55);
 background:linear-gradient(135deg,#ffad33,#ff8c00);
 }
 
-.btnContrato:active,
 .btnDex:active,
+.btnContrato:active,
 .btnTutorial:active{
 transform:scale(0.97);
 }
@@ -2323,19 +2324,19 @@ transform:scale(0.97);
 
 <script>
 
-function abrirContrato(){
+function abrirDex(){
 
 window.open(
-"https://bscscan.com/address/0x75f16b49403712b17f7072baea7ab725f89f5644",
+"https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81",
 "_blank"
 );
 
 }
 
-function abrirDex(){
+function abrirContrato(){
 
 window.open(
-"https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81",
+"https://bscscan.com/address/0x75f16b49403712b17f7072baea7ab725f89f5644",
 "_blank"
 );
 
