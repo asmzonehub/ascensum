@@ -720,81 +720,108 @@ document.getElementById("mensajeContrato").style.display = "none";
 
 
 
-            <!-- ===================== COMIENZA BOTON COPIAR ===================== -->
-            
+                    <!-- ===================== COMIENZA BOTON ENVIAR ===================== -->
 
 
-
-            <div style="
-background:#111;
-padding:15px;
-border-radius:12px;
+                   <div style="
+background:linear-gradient(145deg,#111,#1b1b1b);
+padding:25px;
+border-radius:18px;
 text-align:center;
 margin-top:20px;
-width:80%;
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+border:1px solid rgba(255,255,255,0.08);
+width:100%;
+box-sizing:border-box;
 ">
 
-
-<span id="refLink" style="
-color:#FBFF00;
-font-size:16px;
-word-break:break-all;
-display:block;
-margin-bottom:15px;
-">
-https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81
-</span>
-
-<button onclick="copiarLink()" style="
-background:#378B18;
+<h3 style="
 color:white;
-border:none;
-padding:12px 25px;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-font-weight:bold;
-transition:0.3s;
+margin-bottom:18px;
+font-size:22px;
 ">
-📋 Copiar Link
-</button>
+Acceder a Dexscreener               <!-- ====== Modificar ===== -->
+</h3>
 
-<p id="mensajeLink" style="
-color:#00ff88;
-margin-top:10px;
-display:none;
-font-weight:bold;
+<div style="
+background:#0d0d0d;
+padding:15px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.06);
+margin-bottom:20px;
 ">
-✅ Link copiado correctamente
-</p>
+
+<span style="
+color:#FBFF00;
+font-size:15px;
+word-break:break-all;
+line-height:1.6;
+font-family:monospace;
+">
+https://dexscreener.com                            <!-- ====== Modificar ===== -->
+</span>
 
 </div>
 
+<button onclick="abrirDex()" class="btnDex">     <!-- ====== Ver ===== -->
+🔗 Ingresar Directamente
+</button>
+
+</div>
+
+<style>
+
+.btnDex{
+width:100%;
+max-width:400px;    
+background:linear-gradient(135deg,#46b51f,#2f7e15);
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:all 0.3s ease;
+box-shadow:0 6px 18px rgba(55,139,24,0.35);
+letter-spacing:0.5px;
+}
+
+.btnDex:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 10px 25px rgba(55,139,24,0.55);
+background:linear-gradient(135deg,#52d323,#378B18);
+}
+
+.btnDex:active{
+transform:scale(0.97);
+}
+
+</style>
+
 <script>
-function copiarLink() {
 
-const texto =
-document.getElementById("refLink").innerText;
+function abrirDex(){                   
 
-navigator.clipboard.writeText(texto);
-
-document.getElementById("mensajeLink").style.display = "block";
-
-setTimeout(() => {
-document.getElementById("mensajeLink").style.display = "none";
-}, 2500);
+window.open(
+"https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81",
+"_blank"
+);
 
 }
+
 </script>
 
 
-        <!-- ===================== FIN DEL BOTON COPIAR ===================== -->
+
+      <!-- ===================== FIN BOTON ENVIAR ===================== -->
 
 
 
+
+
+
+            
 
 
 
