@@ -1105,6 +1105,58 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   </script>
 
+
+<!-- FUEGOS ARTIFICIALES (sin causar overflow) -->
+    <style>
+        .firework-star {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.9;
+            mix-blend-mode: screen;
+            box-shadow: 0 0 15px white, 0 0 30px white;
+            z-index: 1000;
+        }
+    </style>
+
+    <script>
+        const fwColors = ['gold', 'white', '#ffd700', '#ffa500'];
+    function createFirework() {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight * 0.4;
+      const particleCount = 30 + Math.floor(Math.random() * 40);
+
+      for (let i = 0; i < particleCount; i++) {
+        const p = document.createElement('div');
+        p.classList.add('firework-star');
+        p.style.left = `${x}px`;
+        p.style.top = `${y}px`;
+        const color = fwColors[Math.floor(Math.random() * fwColors.length)];
+        p.style.backgroundColor = color;
+        p.style.boxShadow = `0 0 15px ${color}, 0 0 30px ${color}`;
+        document.body.appendChild(p);
+
+        const angle = Math.random() * 2 * Math.PI;
+        const radius = 120 + Math.random() * 100;
+        const duration = 1500 + Math.random() * 1200;
+
+        setTimeout(() => {
+          p.style.transition = `transform ${duration}ms ease-out, opacity ${duration}ms ease-out`;
+          const dx = radius * Math.cos(angle);
+          const dy = radius * Math.sin(angle);
+          p.style.transform = `translate(${dx}px, ${dy}px) scale(0)`;
+          p.style.opacity = 0;
+        }, 50);
+
+        setTimeout(() => p.remove(), duration + 120);
+      }
+    }
+    setInterval(createFirework, 10000 + Math.random() * 6000);
+    </script>
+
+    
 </body>
 
 </html>
