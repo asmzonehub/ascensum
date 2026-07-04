@@ -318,13 +318,13 @@
     <div class="nav-bar">
       <div class="logo-container">
 
-        <a href="index.html" target="_blank" class="logo">
+        <a href="" target="_blank" class="logo">
           <img src="../imagenes/Pets_Concilium.png" alt="Logo Concilium">
         </a>
 
 
 
-        <a href="index" target="_blank" class="logo-text">Criptovision Marketing Global Ecom</a>
+        <a href="" target="_blank" class="logo-text">Criptovision Marketing Global Ecom</a>
 
       </div>
       <div class="nav-links">
@@ -610,13 +610,9 @@ function loadVideo(el) {
 
 
 
-
-
-             <div style="margin-top:80px;">
+                            <div style="margin-bottom:10px;">
                 <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
-
                 </div>
-                
                 
 
                 <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
@@ -626,12 +622,12 @@ function loadVideo(el) {
                 ¿Estás listo para dar el siguiente paso?<br>
                  Haz click abajo y asegura tu Nodo ahora.<br>
                 </p>
-
-
+                
+                
 
 
 <!-- ===================================================== -->
-<!-- ================= BOTÓN CTA PRO ===================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
 <!-- ===================================================== -->
 
 <!--
@@ -658,11 +654,16 @@ Reemplazar TU_LINK_AQUI
 
 -->
 
+
 <!-- CONTENEDOR DEL BOTÓN -->
 <div class="cta-container">
 
+
     <!-- BOTÓN -->
-    <a href="https://wa.link/gc8hqf" target="_blank" rel="noopener noreferrer" class="cta-pro">
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
 
         <!-- TEXTO DEL BOTÓN -->
         <span>Quiero comprar mi primer Nodo y comenzar</span>
@@ -832,7 +833,6 @@ showOnScroll();
         
 
 
-
         <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
 
 
@@ -842,7 +842,8 @@ showOnScroll();
 
 
 
-                <div style="margin-top:90px;">
+
+                <div style="margin-top:80px;">
                 <h2>🔹 Cómo Auditar el Token ASM en DexScreener</h2>
                 
                 <p>
@@ -867,78 +868,77 @@ showOnScroll();
 
 
 
-                <!-- ===================== COMIENZA BOTON COPIAR ===================== -->
-            
+
+
+                <!-- ===================== COMIENZA BOTON COPIAR ===================== --> 
+
+
+                <div style=" 
+                background:#111; 
+                padding:15px; 
+                border-radius:12px; 
+                text-align:center; 
+                margin-top:20px; 
+                "> 
+
+                <span id="refContrato" style=" 
+                color:#FBFF00; 
+                font-size:16px; 
+                word-break:break-all; 
+                display:block; 
+                margin-bottom:15px; 
+                "> 
+                0xc16a37ef0066b641a3b64cf892dfde63ecf25f81 
+                </span> 
+
+                    
+                <button onclick="copiarContrato()" style=" 
+                background:#378B18; 
+                color:white; 
+                border:none; 
+                padding:12px 25px; 
+                border-radius:8px; 
+                font-size:16px; 
+                cursor:pointer; 
+                font-weight:bold; 
+                transition:0.3s; 
+                "> 
+                📋 Copiar Contrato 
+                </button> 
+
+                <p id="mensajeCopiado" style=" 
+                color:#00ff88; 
+                margin-top:10px; 
+                display:none; 
+                font-weight:bold; 
+                "> 
+                ✅ Contrato copiado correctamente 
+                </p> 
+
+                </div> 
+
+                <script> 
+                function copiarContrato() { 
+
+                const texto = 
+                document.getElementById("refContrato").innerText; 
+                
+                navigator.clipboard.writeText(texto); 
+
+                document.getElementById("mensajeCopiado").style.display = "block"; 
+
+                setTimeout(() => { 
+                document.getElementById("mensajeCopiado").style.display = "none"; 
+                }, 2500); 
+
+                } 
+                </script> 
 
 
 
-            <div style="
-background:#111;
-padding:15px;
-border-radius:12px;
-text-align:center;
-margin-top:20px;
-width:100%;             <!-- ====== Modificar para agrandar o achicar ancho ===== -->
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
-">
 
-<span id="refContrato" style="
-color:#FBFF00;
-font-size:16px;
-word-break:break-all;
-display:block;
-margin-bottom:15px;
-">
-0xc16a37ef0066b641a3b64cf892dfde63ecf25f81
-</span>
+                <!--===================== FIN DEL BOTON COPIAR ===================== -->
 
-<button onclick="copiarContrato()" style="
-background:#378B18;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-font-weight:bold;
-transition:0.3s;
-">
-📋 Copiar Contrato
-</button>
-
-<p id="mensajeContrato" style="
-color:#00ff88;
-margin-top:10px;
-display:none;
-font-weight:bold;
-">
-✅ Contrato copiado correctamente
-</p>
-
-</div>
-
-<script>
-function copiarContrato() {
-
-const texto =
-document.getElementById("refContrato").innerText;
-
-navigator.clipboard.writeText(texto);
-
-document.getElementById("mensajeContrato").style.display = "block";
-
-setTimeout(() => {
-document.getElementById("mensajeContrato").style.display = "none";
-}, 2500);
-
-}
-</script>
-
-
-        <!-- ===================== FIN DEL BOTON COPIAR ===================== -->
-        
 
 
 
@@ -951,7 +951,7 @@ document.getElementById("mensajeContrato").style.display = "none";
 
 
 
-                    <!-- ===================== COMIENZA BOTON ENVIAR ===================== -->
+                                <!-- ===================== COMIENZA BOTON ENVIAR ===================== -->
 
 
                    <div style="
@@ -995,7 +995,7 @@ https://dexscreener.com                            <!-- ====== Modificar ===== -
 </div>
 
 <button onclick="abrirDex()" class="btnDex">     <!-- ====== Ver ===== -->
-🔗 Ingresar Directamente
+🔗 Ingresar al Dex
 </button>
 
 </div>
@@ -1003,7 +1003,7 @@ https://dexscreener.com                            <!-- ====== Modificar ===== -
 <style>
 
 .btnDex{
-width:100%;
+width:30%;                       
 max-width:400px;    
 background:linear-gradient(135deg,#46b51f,#2f7e15);
 color:white;
@@ -1051,8 +1051,6 @@ window.open(
 
 
 
-
-            
 
 
 
@@ -1409,15 +1407,11 @@ window.open(
                 <!-- ===================== TERMINA LINEA ===================== -->
 
 
-
-
-
-
-                 <div style="margin-top:60px;">
-                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
-
-                </div>
                 
+
+                            <div style="margin-bottom:10px;">
+                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
+                </div>
                 
 
                 <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
@@ -1427,12 +1421,14 @@ window.open(
                 ¿Estás listo para dar el siguiente paso?<br>
                  Haz click abajo y asegura tu Nodo ahora.<br>
                 </p>
+                
+                
 
 
 
 
-                <!-- ===================================================== -->
-<!-- ================= BOTÓN CTA PRO ===================== -->
+<!-- ===================================================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
 <!-- ===================================================== -->
 
 <!--
@@ -1459,11 +1455,16 @@ Reemplazar TU_LINK_AQUI
 
 -->
 
+
 <!-- CONTENEDOR DEL BOTÓN -->
 <div class="cta-container">
 
+
     <!-- BOTÓN -->
-    <a href="https://wa.link/gc8hqf" target="_blank" rel="noopener noreferrer" class="cta-pro">
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
 
         <!-- TEXTO DEL BOTÓN -->
         <span>Quiero comprar mi primer Nodo y comenzar</span>
@@ -1633,11 +1634,13 @@ showOnScroll();
         
 
 
-
         <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
 
 
-        
+
+
+
+
 
 
 
@@ -1663,7 +1666,10 @@ showOnScroll();
                 <p style="margin-top:80px;">
                 Imagen 1</p>
 
-                 <div style="margin-bottom:80px;">
+
+
+
+                 <div style="margin-top:40px; margin-bottom:80px;">
 
     <img src="../imagenes/bscscan_1.png"
          alt="Como verificar un contrato en bscscan"
@@ -1676,7 +1682,10 @@ showOnScroll();
                 </div>
 
 
-                <div style="margin-top:80px; margin-bottom:40px;">
+
+
+
+                 <div style="margin-top:80px; margin-bottom:30px;">
                 <h3>Acceso Directo</h3>
                 <p>Si prefieres ahorrar tiempo, puedes utilizar los siguientes accesos directos:
                 <br>
@@ -1705,9 +1714,6 @@ showOnScroll();
     </a>
 
 </div>
-
-
-
 
 
 
@@ -1806,6 +1812,8 @@ showOnScroll();
                 Esto confirma que con el 20% de la compra de un nodo se compraron tokens ASM en Pancakeswap y se quemaron.
                 </p>
 
+
+
                 <p style="margin-top:80px;">
                 Imagen 4</p>
 
@@ -1843,6 +1851,7 @@ showOnScroll();
                 Lo que se destina para desarrollo y marketing es el 5% de cada nodo, es lo que permite continuar ampliando el Ecosistema.
                 </p>
                 
+
 
                 <p style="margin-top:80px;">
                 Imagen 5</p>
@@ -2001,10 +2010,10 @@ showOnScroll();
 
 
 
-                <div style="margin-top:80px;">
+            <div style="margin-bottom:10px;">
                 <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
-
                 </div>
+                
 
                 <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
 
@@ -2013,12 +2022,15 @@ showOnScroll();
                 ¿Estás listo para dar el siguiente paso?<br>
                  Haz click abajo y asegura tu Nodo ahora.<br>
                 </p>
-
+                
                 
 
 
+
+
+
 <!-- ===================================================== -->
-<!-- ================= BOTÓN CTA PRO ===================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
 <!-- ===================================================== -->
 
 <!--
@@ -2045,11 +2057,16 @@ Reemplazar TU_LINK_AQUI
 
 -->
 
+
 <!-- CONTENEDOR DEL BOTÓN -->
 <div class="cta-container">
 
+
     <!-- BOTÓN -->
-    <a href="https://wa.link/gc8hqf" target="_blank" rel="noopener noreferrer" class="cta-pro" id="ctaPro">
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
 
         <!-- TEXTO DEL BOTÓN -->
         <span>Quiero comprar mi primer Nodo y comenzar</span>
@@ -2191,21 +2208,27 @@ Reemplazar TU_LINK_AQUI
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const btn = document.getElementById("ctaPro");
+const botones = document.querySelectorAll(".cta-pro");
 
-    function showOnScroll() {
+function showOnScroll() {
 
-        const trigger = window.innerHeight * 0.8;
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
         const rect = btn.getBoundingClientRect();
 
         if (rect.top < trigger) {
             btn.classList.add("visible");
         }
-    }
 
-    window.addEventListener("scroll", showOnScroll);
+    });
 
-    showOnScroll();
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
 });
 
 </script>
@@ -2213,7 +2236,13 @@ document.addEventListener("DOMContentLoaded", function() {
         
 
 
-        <!-- ===================== FIN DEL BOTON ===================== -->
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+
+
+
+
+
+
 
 
 
@@ -2482,13 +2511,16 @@ function loadVideo(el) {
         <div class="footer-black">
             <div class="left">© Copyright 2026 - All Rights Reserved - Criptovision Marketing Global Ecom</div>
             <div class="right">
-                <a href="https://t.me/nodosasm" target="_blank" rel="noopener noreferrer">Telegram</a>
-                <a href="https://wa.link/gc8hqf" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="asm-link-telegram">Telegram</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="asm-link-whatsapp">Whatsapp</a>
                 
             </div>
         </div>
         <div class="footer-bottom-green"></div>
     </section>
+
+
+
 
     <!-- JS SCROLL EFECTO -->
     <script>
@@ -2499,20 +2531,11 @@ function loadVideo(el) {
     });
     </script>
 
+
+
+
     <!-- FUEGOS ARTIFICIALES (sin causar overflow) -->
-    <style>
-        .firework-star {
-            position: fixed;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.9;
-            mix-blend-mode: screen;
-            box-shadow: 0 0 15px white, 0 0 30px white;
-            z-index: 1000;
-        }
-    </style>
+    
 
     <script>
         const fwColors = ['gold', 'white', '#ffd700', '#ffa500'];
@@ -2548,6 +2571,15 @@ function loadVideo(el) {
     }
     setInterval(createFirework, 10000 + Math.random() * 6000);
     </script>
+
+
+
+
+    <script src="../sistema/01-MIS-DATOS.js"></script>
+    <script src="../sistema/02-ENLACES.js"></script>
+    <script src="../sistema/04-FUEGOS.js"></script>
+
+
 
 </body>
 
