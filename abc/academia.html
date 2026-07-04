@@ -311,7 +311,7 @@
       <div class="nav-links">
         
 
-        <a href="https://wa.link/gc8hqf" target="_blank">Contacto</a>
+        <a href="#" target="_blank" class="asm-link-whatsapp">Contacto</a>
         <a href="index.html" target="_blank">Ascensum Dao</a>
       </div>
     </div>
@@ -875,8 +875,10 @@ categoryButtons.forEach(button => {
                 
 
 
+                
+
                 <!-- ===================================================== -->
-<!-- ================= BOTÓN CTA PRO ===================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
 <!-- ===================================================== -->
 
 <!--
@@ -903,11 +905,16 @@ Reemplazar TU_LINK_AQUI
 
 -->
 
+
 <!-- CONTENEDOR DEL BOTÓN -->
 <div class="cta-container">
 
+
     <!-- BOTÓN -->
-    <a href="https://wa.link/gc8hqf" target="_blank" rel="noopener noreferrer" class="cta-pro" id="ctaPro">
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
 
         <!-- TEXTO DEL BOTÓN -->
         <span>Quiero comprar mi primer Nodo y comenzar</span>
@@ -1049,21 +1056,27 @@ Reemplazar TU_LINK_AQUI
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const btn = document.getElementById("ctaPro");
+const botones = document.querySelectorAll(".cta-pro");
 
-    function showOnScroll() {
+function showOnScroll() {
 
-        const trigger = window.innerHeight * 0.8;
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
         const rect = btn.getBoundingClientRect();
 
         if (rect.top < trigger) {
             btn.classList.add("visible");
         }
-    }
 
-    window.addEventListener("scroll", showOnScroll);
+    });
 
-    showOnScroll();
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
 });
 
 </script>
@@ -1071,7 +1084,13 @@ document.addEventListener("DOMContentLoaded", function() {
         
 
 
-        <!-- ===================== FIN DEL BOTON ===================== -->
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+
+
+
+
+
+
 
 
          <hr style="margin-top:60px; margin-bottom:60px;">
@@ -1085,8 +1104,8 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="footer-black">
       <div class="left">© Copyright 2026 - All Rights Reserved - Criptovision Marketing Global Ecom</div>
       <div class="right">
-        <a href="https://t.me/nodosasm" target="_blank">Telegram</a>
-        <a href="https://wa.link/gc8hqf" target="_blank">Whatsapp</a>
+        <a href="#" target="_blank" class="asm-link-telegram">Telegram</a>
+        <a href="#" target="_blank" class="asm-link-whatsapp">Whatsapp</a>
         
       </div>
     </div>
@@ -1105,21 +1124,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   </script>
 
-
 <!-- FUEGOS ARTIFICIALES (sin causar overflow) -->
-    <style>
-        .firework-star {
-            position: fixed;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.9;
-            mix-blend-mode: screen;
-            box-shadow: 0 0 15px white, 0 0 30px white;
-            z-index: 1000;
-        }
-    </style>
+
 
     <script>
         const fwColors = ['gold', 'white', '#ffd700', '#ffa500'];
@@ -1156,7 +1162,15 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(createFirework, 10000 + Math.random() * 6000);
     </script>
 
-    
+
+
+
+    <script src="../sistema/01-MIS-DATOS.js"></script>
+    <script src="../sistema/02-ENLACES.js"></script>
+    <script src="../sistema/04-FUEGOS.js"></script>
+
+
+
 </body>
 
 </html>
