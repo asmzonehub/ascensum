@@ -18,7 +18,7 @@ async function cargarConfiguracion() {
 
     try {
 
-        const respuesta = await fetch("../config.json");
+        const respuesta = await fetch("/ascensum/bbc/config.json");
 
         if (!respuesta.ok) {
             throw new Error("No se pudo cargar config.json");
