@@ -4,15 +4,15 @@
 
 let ASCENSUM = {};
 
-// let WHATSAPP_COMPRAR = "";
-// let WHATSAPP_AYUDA = "";
-// let CONTACTO_PRINCIPAL = "";
-//
-// let TELEGRAM = "";
-//
-// let WALLET = "";
-//
-// let LINK_REFERIDO = "";
+ let WHATSAPP_COMPRAR = "";
+ let WHATSAPP_AYUDA = "";
+ let CONTACTO_PRINCIPAL = "";
+
+ let TELEGRAM = "";
+
+ let WALLET = "";
+
+ let LINK_REFERIDO = "";
 
 async function cargarConfiguracion() {
 
@@ -35,7 +35,7 @@ async function cargarConfiguracion() {
         // ===========================
 
         console.log("Llegué hasta acá");
-        
+
         WHATSAPP_COMPRAR =
             "https://wa.link/" + ASCENSUM.whatsapp.comprar;
 
