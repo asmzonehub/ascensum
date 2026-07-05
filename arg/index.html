@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ascensum</title>
-    <link rel="icon" type="image/png" href="imagenes/pets_universe.png">
+    <link rel="icon" type="image/png" href="../imagenes/pets_universe.png">
 
     <style>
         /* ======= RESET / SEGURIDAD LAYOUT ======= */
@@ -184,13 +184,13 @@
         /* ===================== PIE DE PÁGINA ===================== */
         .footer-top-green {
             background-color: #3a8308;
-            height: 0.5cm;
+            height: 20px;
             width: 100%;
         }
 
         .footer-black {
             background-color: #000;
-            min-height: 2.5cm;
+            min-height: 95px;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -226,7 +226,7 @@
 
         .footer-bottom-green {
             background-color: #3a8308;
-            height: 0.6cm;
+            height: 25px;
             width: 100%;
         }
 
@@ -267,13 +267,36 @@
                 text-align: center;
             }
         }
+
+
+
+      /* Celular horizontal */
+@media screen and (max-width:1000px) and (orientation:landscape) {
+
+    /* Ocultar barras superiores */
+    .nav-bar,
+    .green-bar {
+        display: none !important;
+    }
+
+    /* Reducir tamaño del video */
+    .video-box {
+        max-width: 75% !important;
+    }
+
+}
+
+
+
+
+
+
     </style>
 </head>
 
 <body>
 
-          <!-- ===================== ENCABEZADO ===================== -->      
-
+      <!-- ===================== ENCABEZADO ===================== -->
   <div class="top-bar">
     <div class="green-bar"></div>
     <div class="nav-bar">
@@ -290,8 +313,8 @@
       </div>
       <div class="nav-links">
         
-        <a href="contactodemo" target="_blank">Contacto</a>
-        <a href="index.html" target="_blank">Ascensum Dao</a>
+        <a href="academia.html" target="_blank">Academia</a>
+        <a href="renuncia.html" target="_blank">Renuncia</a>
       </div>
     </div>
   </div>
@@ -394,7 +417,7 @@
 
 
 
-            <div style="margin-top:60px;">
+            <div style="margin-top:60px; margin-bottom:40px;">
                 <h1>🔹 Filosofía Ascensum</h1>
                 
 
@@ -411,6 +434,105 @@
                 </p>
                 </div>
 
+
+                 <!-- ===================== COMIENZA VIDEO RESPONSIVE ===================== -->
+
+
+     <div class="video-box"
+     data-video="2mM0jSKLJkY"         
+     style="position:relative;max-width:800px;margin:auto;cursor:pointer;"
+     onclick="loadVideo(this)">
+
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+
+    <!-- Miniatura -->
+    <img src="https://img.youtube.com/vi/2mM0jSKLJkY/hqdefault.jpg"    
+         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+    <!-- Botón Play -->
+    <div class="play-button"></div>
+
+  </div>
+
+</div>
+
+
+
+<style>
+.play-button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:videopulse 1.5s infinite;
+}
+
+.play-button::before {
+  content:'';
+  width:0;
+  height:0;
+  border-left:25px solid white;
+  border-top:15px solid transparent;
+  border-bottom:15px solid transparent;
+}
+
+@keyframes videopulse {
+  0% { transform:translate(-50%,-50%) scale(1); }
+  50% { transform:translate(-50%,-50%) scale(1.1); }
+  100% { transform:translate(-50%,-50%) scale(1); }
+}
+
+/* Fade-in */
+.fade-in {
+  opacity:0;
+  transition:opacity 0.8s ease;
+}
+
+.fade-in.show {
+  opacity:1;
+}
+
+
+</style>
+
+
+
+<script>
+function loadVideo(el) {
+
+  const videoId = el.getAttribute("data-video");
+
+  el.innerHTML = `
+   <div style="position:relative;padding-bottom:56.25%;height:0;">
+
+  <iframe
+    class="ytvideo fade-in"
+    src="https://www.youtube.com/embed/${videoId}?controls=1&rel=0&playsinline=1"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+</div>
+  `;
+
+  setTimeout(() => {
+    el.querySelector(".ytvideo").classList.add("show");
+  }, 100);
+}
+</script>
+
+
+
+         <!-- ===================== FIN DEL VIDEO RESPONSIVE ===================== -->
 
 
 
@@ -584,6 +706,243 @@
                 
 
 
+
+           
+            <div style="margin-bottom:10px;">
+                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
+                </div>
+                
+
+                <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
+
+
+                <br>
+                ¿Estás listo para dar el siguiente paso?<br>
+                 Haz click abajo y asegura tu Nodo ahora.<br>
+                </p>
+                
+                
+
+
+<!-- ===================================================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
+<!-- ===================================================== -->
+
+<!--
+PERSONALIZACIÓN RÁPIDA
+
+CAMBIAR POSICIÓN:
+center = centro
+left = izquierda
+right = derecha
+
+CAMBIAR COLOR:
+Busca:
+background: linear-gradient(...)
+
+CAMBIAR TAMAÑO:
+padding: 16px 30px;
+font-size: 18px;
+
+CAMBIAR TEXTO:
+Quiero vender Nodos Ascensum
+
+CAMBIAR LINK:
+Reemplazar TU_LINK_AQUI
+
+-->
+
+
+<!-- CONTENEDOR DEL BOTÓN -->
+<div class="cta-container">
+
+
+    <!-- BOTÓN -->
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
+
+        <!-- TEXTO DEL BOTÓN -->
+        <span>Quiero comprar mi primer Nodo y comenzar</span>
+
+        <!-- FLECHA -->
+        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M5 12h14M13 5l7 7-7 7"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"/>
+        </svg>
+
+    </a>
+
+</div>
+
+<style>
+
+/* ===================================================== */
+/* ================= POSICIÓN BOTÓN ==================== */
+/* ===================================================== */
+
+.cta-container {
+
+    /* CAMBIAR:
+       center = centro
+       left = izquierda
+       right = derecha
+    */
+
+    text-align: center;
+
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* ===================================================== */
+/* ==================== BOTÓN ========================== */
+/* ===================================================== */
+
+.cta-pro {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    /* TAMAÑO BOTÓN */
+    padding: 16px 30px;
+
+    /* TAMAÑO TEXTO */
+    font-size: 18px;
+
+    font-weight: 600;
+    color: #121211;
+
+    /* COLOR BOTÓN */
+    background: linear-gradient(135deg, #00c853, #00e676);
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    /* SOMBRA */
+    box-shadow: 0 10px 25px rgba(0, 200, 83, 0.35);
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: pulse 2.5s infinite;
+}
+
+/* ===================================================== */
+/* ===================== HOVER ========================= */
+/* ===================================================== */
+
+.cta-pro:hover {
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 15px 35px rgba(0, 200, 83, 0.6);
+}
+
+/* ===================================================== */
+/* ===================== CLICK ========================= */
+/* ===================================================== */
+
+.cta-pro:active {
+    transform: scale(0.96);
+}
+
+/* ===================================================== */
+/* ================= FLECHA ANIMADA ==================== */
+/* ===================================================== */
+
+.cta-pro .arrow {
+    transition: transform 0.3s ease;
+}
+
+.cta-pro:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* ===================================================== */
+/* ================= EFECTO PULSE ====================== */
+/* ===================================================== */
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 200, 83, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+    }
+}
+
+/* ===================================================== */
+/* ============== APARECER CON SCROLL ================= */
+/* ===================================================== */
+
+.cta-pro.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+
+<script>
+
+/* ===================================================== */
+/* ========= MOSTRAR BOTÓN AL HACER SCROLL ============ */
+/* ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const botones = document.querySelectorAll(".cta-pro");
+
+function showOnScroll() {
+
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
+        const rect = btn.getBoundingClientRect();
+
+        if (rect.top < trigger) {
+            btn.classList.add("visible");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
+});
+
+</script>
+
+        
+        <!-- ====================================================================== -->
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+        <!-- ====================================================================== -->
+
+
+
+
+
+
+
+
+
+
+
                
                <div style="margin-top:80px; margin-bottom:40px;">
                 <h3>👉 “Si llegaste hasta acá.... no es casualidad"<br>
@@ -744,7 +1103,7 @@ function loadVideo(el) {
 
             
 
-            <p>
+            <p style="margin-bottom:40px;">
             Cada vez que se activa un nodo, el valor se distribuye dentro del ecosistema:
             <br>
             <br>
@@ -765,10 +1124,116 @@ function loadVideo(el) {
             ✔ El sistema se retroalimenta con la participación<br>
             <br>            
             👉 A medida que el ecosistema crece, la cantidad de ASM disponible se reduce<br>
-            
+            </p>
+
+
+
+
+            <!-- ===================== VIDEO RESPONSIVE ===================== -->
+
+
+     <div class="video-box"
+     data-video="j1L01odY4A4"         
+     style="position:relative;max-width:800px;margin:auto;cursor:pointer;"
+     onclick="loadVideo(this)">
+
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+
+    <!-- Miniatura -->
+    <img src="https://img.youtube.com/vi/j1L01odY4A4/hqdefault.jpg"    
+         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+    <!-- Botón Play -->
+    <div class="play-button"></div>
+
+  </div>
+
+</div>
+
+
+
+<style>
+.play-button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:videopulse 1.5s infinite;
+}
+
+.play-button::before {
+  content:'';
+  width:0;
+  height:0;
+  border-left:25px solid white;
+  border-top:15px solid transparent;
+  border-bottom:15px solid transparent;
+}
+
+@keyframes videopulse {
+  0% { transform:translate(-50%,-50%) scale(1); }
+  50% { transform:translate(-50%,-50%) scale(1.1); }
+  100% { transform:translate(-50%,-50%) scale(1); }
+}
+
+/* Fade-in */
+.fade-in {
+  opacity:0;
+  transition:opacity 0.8s ease;
+}
+
+.fade-in.show {
+  opacity:1;
+}
+
+
+</style>
+
+
+
+<script>
+function loadVideo(el) {
+
+  const videoId = el.getAttribute("data-video");
+
+  el.innerHTML = `
+   <div style="position:relative;padding-bottom:56.25%;height:0;">
+
+  <iframe
+    class="ytvideo fade-in"
+    src="https://www.youtube.com/embed/${videoId}?controls=1&rel=0&playsinline=1"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+</div>
+  `;
+
+  setTimeout(() => {
+    el.querySelector(".ytvideo").classList.add("show");
+  }, 100);
+}
+</script>
+
+
+
+        
+
+
+         <!-- ===================== FIN DEL VIDEO RESPONSIVE ===================== -->
+
 
              
-             <br>
+            <p style="margin-top:50px;">
             🔹 La liquidez fue quemada<br>
             🔹 El contrato de ASM fue renunciado<br>
             <br>
@@ -884,47 +1349,237 @@ function loadVideo(el) {
             
 
 
-             <h3><a href="https://bscscan.com/address/0x87Bc4Ae48CDae1127ccF8694F245FF013375cDeb" target="_blank" rel="noopener noreferrer">👉 Da click aqui y podras comprobar cuantos usdt hay en el Tesoro</a></h3>
+             <h3>Este es el contrato del Tesoro de Ascensum</h3>
+
+               <p> 0x87Bc4Ae48CDae1127ccF8694F245FF013375cDeb</p>
+
+            <p style="margin-top:30px; margin-bottom:30px;">
+            Da click en el Boton Verificar Fondos del Tesoro y podras comprobar cuantos usdt hay en la cuenta 👇</p>
+
+
+
+
+
+                  <!-- ===================== COMIENZA BOTON ENVIAR ===================== -->
+
+
+                   <div style="
+background:linear-gradient(145deg,#111,#1b1b1b);
+padding:25px;
+border-radius:18px;
+text-align:center;
+margin-top:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+border:1px solid rgba(255,255,255,0.08);
+width:100%;
+box-sizing:border-box;
+">
+
+<h3 style="
+color:white;
+margin-bottom:18px;
+font-size:22px;
+">
+⭐ Tesoro de Ascensum DAO               <!-- ====== Modificar ===== -->
+</h3>
+
+<div style="
+background:#0d0d0d;
+padding:15px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.06);
+margin-bottom:20px;
+">
+
+<span style="
+color:#FBFF00;
+font-size:15px;
+word-break:break-all;
+line-height:1.6;
+font-family:monospace;
+">
+https://bscscan.com                            <!-- ====== Modificar ===== -->
+</span>
+
+</div>
+
+<button onclick="abrirBscscan()" class="btnContrato">     <!-- ====== Ver ===== -->
+🔗 Verificar Fondos del Tesoro
+</button>
+
+</div>
+
+<style>
+
+.btnContrato{
+width:100%;
+max-width:400px;    
+background:linear-gradient(135deg,#46b51f,#2f7e15);
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:all 0.3s ease;
+box-shadow:0 6px 18px rgba(55,139,24,0.35);
+letter-spacing:0.5px;
+}
+
+.btnContrato:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 10px 25px rgba(55,139,24,0.55);
+background:linear-gradient(135deg,#52d323,#378B18);
+}
+
+.btnContrato:active{
+transform:scale(0.97);
+}
+
+</style>
+
+<script>
+
+function abrirBscscan(){
+
+window.open(
+"https://bscscan.com/address/0x87Bc4Ae48CDae1127ccF8694F245FF013375cDeb",
+"_blank"
+);
+
+}
+
+</script>
+
                 
 
             
-            <p>
+            <p style="margin-bottom:60px;">
             ℹ️ <b>Nota:</b> En algunos dispositivos móviles, BscScan puede realizar una verificación de seguridad antes de mostrar la información.<br>
             Si observas el mensaje <b>"Verificación de seguridad en curso"</b>, no te preocupes es normal, espera unos segundos mientras finaliza el proceso.
-            <br>
-            <br>
+            </p>
 
-
+                <p style="margin-bottom:40px;">
                 Para conocer la cantidad de usdt que hay en el fondo común <b>"Tesoro"</b> debes mirar debajo de Token Holdings<br> 
                 En estos momentos hay 160.775 usdt <br><br>
                 Al comprar un nodo de 25 usdt estaras aportando al tesoro de Ascensum 5 usdt, con el nodo de 50 usdt estaras aportando 10 usdt, con el de 100 usdt aportaras 20 usdt al tesoro y asi sucesivamente con cada compra de nodo.<br>
                 <br>
                 Ese dinero adicional que aportas al tesoro te pertenece, es de por vida y hereditario.
-                <br> 
-                <br>
+                </p>
 
-
+                <p style="margin-bottom:60px;">
                 ✅ Estos 3 pilares son los que sostienen el funcionamiento y crecimiento del ecosistema Ascensum.
                 </p>
                           
 
 
-            <div style="margin-top:60px; margin-bottom:80px;">
 
-    <img src="../imagenes/el_tesoro_ascensum_dao.jpeg"
-         alt="Tesoro ascensum dao - El seguro de nuestras inversiones"
-         style="max-width:600px;
-                width:100%;
-                height:auto;
-                display:block;
-                margin:auto;">
+                             <!-- ===================== VIDEO RESPONSIVE ===================== -->
+
+
+     <div class="video-box"
+     data-video="b2vQJcVjHw8"         
+     style="position:relative;max-width:800px;margin:auto;cursor:pointer;"
+     onclick="loadVideo(this)">
+
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+
+    <!-- Miniatura -->
+    <img src="https://img.youtube.com/vi/b2vQJcVjHw8/hqdefault.jpg"    
+         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+    <!-- Botón Play -->
+    <div class="play-button"></div>
+
+  </div>
 
 </div>
 
 
 
+<style>
+.play-button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:videopulse 1.5s infinite;
+}
+
+.play-button::before {
+  content:'';
+  width:0;
+  height:0;
+  border-left:25px solid white;
+  border-top:15px solid transparent;
+  border-bottom:15px solid transparent;
+}
+
+@keyframes videopulse {
+  0% { transform:translate(-50%,-50%) scale(1); }
+  50% { transform:translate(-50%,-50%) scale(1.1); }
+  100% { transform:translate(-50%,-50%) scale(1); }
+}
+
+/* Fade-in */
+.fade-in {
+  opacity:0;
+  transition:opacity 0.8s ease;
+}
+
+.fade-in.show {
+  opacity:1;
+}
+
+
+</style>
+
+
+
+<script>
+function loadVideo(el) {
+
+  const videoId = el.getAttribute("data-video");
+
+  el.innerHTML = `
+   <div style="position:relative;padding-bottom:56.25%;height:0;">
+
+  <iframe
+    class="ytvideo fade-in"
+    src="https://www.youtube.com/embed/${videoId}?controls=1&rel=0&playsinline=1"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+</div>
+  `;
+
+  setTimeout(() => {
+    el.querySelector(".ytvideo").classList.add("show");
+  }, 100);
+}
+</script>
+
+
+
+         <!-- ===================== FIN DEL VIDEO RESPONSIVE ===================== -->
+
+
+
+            <div style="margin-top:80px;">
              <h2>¿Por qué muchas personas están comprando nodos ahora?</h2>
-            
+            </div>
+
             <p>El desarrollo de Ascensum está vinculado a la participación de su comunidad.<br>
             A medida que más personas se suman y el sistema crece, se activan diferentes mecanismos internos que impactan en su evolución.<br><br>
 
@@ -945,31 +1600,22 @@ function loadVideo(el) {
             
            
             
-               
-
-                <div style="margin-top:60px; margin-bottom:80px;">
-
-    <img src="../imagenes/ascensum_dao1.png"
-         alt="Ecosistema Ascensum Dao"
-         style="max-width:650px;
-                width:100%;
-                height:auto;
-                display:block;
-                margin:auto;">
-
-                </div>
 
 
 
-        <div style="margin-top:100px; margin-bottom:60px;">
+        <div style="margin-top:80px;">
         <h1>Nuestro principal Producto: Nodos de Mineria</h1>
-        
-        <p>
+        </div>
+
+
+
+
+            <p style="margin-bottom:50px;">
             Estos nodos generan el token ASM durante 360 días.<br>
             Existen 11 opciones disponibles, comenzando desde solo 25 USDT<br>
             ▪️ A continuacion tienes la lista completa con los valores de cada Nodo
             </p>
-            </div>
+            
            
 
             
@@ -1148,6 +1794,243 @@ VALOR DE NODOS
             </p>
             </div>
             
+
+
+
+
+
+             <div style="margin-bottom:10px;">
+                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
+                </div>
+                
+
+                <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
+
+
+                <br>
+                ¿Estás listo para dar el siguiente paso?<br>
+                 Haz click abajo y asegura tu Nodo ahora.<br>
+                </p>
+                
+                
+
+
+
+<!-- ===================================================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
+<!-- ===================================================== -->
+
+<!--
+PERSONALIZACIÓN RÁPIDA
+
+CAMBIAR POSICIÓN:
+center = centro
+left = izquierda
+right = derecha
+
+CAMBIAR COLOR:
+Busca:
+background: linear-gradient(...)
+
+CAMBIAR TAMAÑO:
+padding: 16px 30px;
+font-size: 18px;
+
+CAMBIAR TEXTO:
+Quiero vender Nodos Ascensum
+
+CAMBIAR LINK:
+Reemplazar TU_LINK_AQUI
+
+-->
+
+
+<!-- CONTENEDOR DEL BOTÓN -->
+<div class="cta-container">
+
+
+    <!-- BOTÓN -->
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
+
+        <!-- TEXTO DEL BOTÓN -->
+        <span>Quiero comprar mi primer Nodo y comenzar</span>
+
+        <!-- FLECHA -->
+        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M5 12h14M13 5l7 7-7 7"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"/>
+        </svg>
+
+    </a>
+
+</div>
+
+<style>
+
+/* ===================================================== */
+/* ================= POSICIÓN BOTÓN ==================== */
+/* ===================================================== */
+
+.cta-container {
+
+    /* CAMBIAR:
+       center = centro
+       left = izquierda
+       right = derecha
+    */
+
+    text-align: center;
+
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* ===================================================== */
+/* ==================== BOTÓN ========================== */
+/* ===================================================== */
+
+.cta-pro {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    /* TAMAÑO BOTÓN */
+    padding: 16px 30px;
+
+    /* TAMAÑO TEXTO */
+    font-size: 18px;
+
+    font-weight: 600;
+    color: #121211;
+
+    /* COLOR BOTÓN */
+    background: linear-gradient(135deg, #00c853, #00e676);
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    /* SOMBRA */
+    box-shadow: 0 10px 25px rgba(0, 200, 83, 0.35);
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: pulse 2.5s infinite;
+}
+
+/* ===================================================== */
+/* ===================== HOVER ========================= */
+/* ===================================================== */
+
+.cta-pro:hover {
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 15px 35px rgba(0, 200, 83, 0.6);
+}
+
+/* ===================================================== */
+/* ===================== CLICK ========================= */
+/* ===================================================== */
+
+.cta-pro:active {
+    transform: scale(0.96);
+}
+
+/* ===================================================== */
+/* ================= FLECHA ANIMADA ==================== */
+/* ===================================================== */
+
+.cta-pro .arrow {
+    transition: transform 0.3s ease;
+}
+
+.cta-pro:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* ===================================================== */
+/* ================= EFECTO PULSE ====================== */
+/* ===================================================== */
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 200, 83, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+    }
+}
+
+/* ===================================================== */
+/* ============== APARECER CON SCROLL ================= */
+/* ===================================================== */
+
+.cta-pro.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+
+<script>
+
+/* ===================================================== */
+/* ========= MOSTRAR BOTÓN AL HACER SCROLL ============ */
+/* ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const botones = document.querySelectorAll(".cta-pro");
+
+function showOnScroll() {
+
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
+        const rect = btn.getBoundingClientRect();
+
+        if (rect.top < trigger) {
+            btn.classList.add("visible");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
+});
+
+</script>
+
+        
+
+
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+
+
+
+
+
+
+
 
 
 
@@ -1409,17 +2292,77 @@ window.open(
 
             <h1>🔹 No estarás solo en este proceso</h1>
             
-            <p>
-            Si decides avanzar y adquirir tu Nodo, no solo estarás ingresando a Ascensum…
+
+            <p>Si decides avanzar y adquirir tu Nodo, no solo estarás ingresando a Ascensum…<br>
+
+            Estarás entrando a un ecosistema de la mano de alguien que ya recorrió todo el camino: <br>
             <br>
-            📚 Ascensum también te dara acceso a capacitaciones y cursos exclusivos para dueños de nodos, para que sigas creciendo mes a mes dentro del ecosistema.
+            ✅ Operando en la empresa desde su lanzamiento<br>
+            ✅ 9 años en el mundo cripto<br>
+            ✅ Con la cruda experiencia de varios proyectos anteriores<br>
             <br>
-            <br>           
+
+            Conozco cada detalle de la operatoria: desde la activación del nodo, la configuración de wallets y maximización de ganancias.<br>
+            <br>
+            Por eso, aunque hoy no tengas experiencia en criptomonedas, wallets o plataformas digitales, voy a poder guiarte paso a paso desde cero para que entiendas todo con claridad y seguridad.
+            <br><br>
+
+            👉 Tu inexperiencia se apoyará en mi experiencia.<br>
+            <br>
+
+            Opcionalmente si decides aprovechar el sistema de comisiones por ventas de Nodos<br>
+            Desde el primer día recibirás todo el material necesario para comenzar de una forma simple y profesional: imágenes, videos, textos y herramientas listas para utilizar.
+            <br>
+            <br>
+            Además, estaré acompañándote paso a paso para ayudarte a entender:
+            <br>
+            <br>
+            🔹 Que es Ascensum y como funciona.<br>
+            🔹 Que son los nodos y como adquirirlos.<br>
+            🔹 Cómo crear y utilizar tu billetera digital.<br>
+            🔹 Cómo realizar las operaciones necesarias de forma sencilla.<br>
+            🔹 Cómo compartir esta oportunidad de manera clara y profesional.<br>
+            <br>
+            ⭐ También recibirás estos bonos exclusivos para potenciar tu crecimiento:<br>
+            <br>
+
+            🎁 Tu propio sitio web listo para utilizar y promocionar tu negocio<br>
+            🎁 Alojamiento de tus páginas web.<br>
+            🎁 Configuración de enlaces y sistema de respuestas automáticas.<br>
+            🎁 Material de promoción profesional: imágenes, videos y textos.<br>
+            <br>
+            🔹 Y, sobre todo, tendrás mi apoyo y la información necesaria para avanzar con tranquilidad y confianza.
+            <br>
+            <br>
+            No importa si nunca antes utilizaste criptomonedas ni conoces cómo funciona este mundo.<br>
+            Lo único que necesitas es tener ganas de aprender y dar el primer paso.
+            <br>
+            <br>
+            La idea es clara: no pierdas meses probando y equivocándote.
+            <br>
+            <br>
+            Lo importante es que no tengas que empezar desde cero ni perder tiempo aprendiendo solo.
+            <br>
+            Empiezas con todo el camino allanado.<br>
+            <br>
+            📚 Y como si eso fuera poco, Ascensum también te da acceso a capacitaciones y cursos exclusivos para dueños de nodos, para que sigas creciendo mes a mes dentro del ecosistema.
+            <br>
+            <br>          
+
             🚀 No se trata solo de comprar un Nodo.<br>
+            Se trata de entrar acompañado por alguien que ya recorrió el camino.<br>
+            🔥 Vas a empezar donde a muchos les llevó años llegar.<br>
+            <br>
+            Es entrar al juego con ventaja.<br>
             Es tener soporte real, conocimiento práctico y un sistema probado trabajando para ti.<br>
             <br>
-             No necesitas ser experto ni tener experiencia previa.<br>
-             Solo ganas de aprender y crecer paso a paso.<br>
+
+            No necesitas ser experto ni tener experiencia previa.<br>
+            Solo ganas de aprender y crecer paso a paso.
+            <br>
+            <br>
+            Tómate unos minutos para recorrer toda la informacion.<br>
+            Tal vez hoy estés descubriendo una nueva oportunidad que pueda cambiar tu camino.<br>
              </p>
 
                     
@@ -1436,11 +2379,11 @@ window.open(
            
             
 
-            <div style="margin-top:60px;">
-                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
+            
 
+             <div style="margin-bottom:10px;">
+                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
                 </div>
-                
                 
 
                 <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
@@ -1450,12 +2393,12 @@ window.open(
                 ¿Estás listo para dar el siguiente paso?<br>
                  Haz click abajo y asegura tu Nodo ahora.<br>
                 </p>
-
+                
                 
 
 
-                <!-- ===================================================== -->
-<!-- ================= BOTÓN CTA PRO ===================== -->
+<!-- ===================================================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
 <!-- ===================================================== -->
 
 <!--
@@ -1482,11 +2425,16 @@ Reemplazar TU_LINK_AQUI
 
 -->
 
+
 <!-- CONTENEDOR DEL BOTÓN -->
 <div class="cta-container">
 
+
     <!-- BOTÓN -->
-    <a href="https://wa.link/tikzvz" target="_blank" rel="noopener noreferrer" class="cta-pro" id="ctaPro">
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
 
         <!-- TEXTO DEL BOTÓN -->
         <span>Quiero comprar mi primer Nodo y comenzar</span>
@@ -1628,21 +2576,27 @@ Reemplazar TU_LINK_AQUI
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const btn = document.getElementById("ctaPro");
+const botones = document.querySelectorAll(".cta-pro");
 
-    function showOnScroll() {
+function showOnScroll() {
 
-        const trigger = window.innerHeight * 0.8;
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
         const rect = btn.getBoundingClientRect();
 
         if (rect.top < trigger) {
             btn.classList.add("visible");
         }
-    }
 
-    window.addEventListener("scroll", showOnScroll);
+    });
 
-    showOnScroll();
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
 });
 
 </script>
@@ -1650,7 +2604,12 @@ document.addEventListener("DOMContentLoaded", function() {
         
 
 
-        <!-- ===================== FIN DEL BOTON ===================== -->
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+
+
+
+
+
 
 
 
@@ -1790,7 +2749,7 @@ function loadVideo(el) {
 
 <div style="margin-top:100px; margin-bottom:80px;">
 
-    <img src="../imagenes/sigues_dudando.jpg"
+    <img src="../imagenes/sigues_dudando.jpeg"
          alt="Vas a seguir dudando"
          usemap="#image-map"
          id="imagenMapa"
@@ -1804,7 +2763,17 @@ function loadVideo(el) {
 
 </div>
 
+<map name="image-map">
 
+    <area target="_blank"
+          alt="Vas a seguir dudando"
+          title="Vas a seguir dudando"
+          href="https://wa.link/eck1xi"
+          coords="135,1302,901,1501"
+          shape="rect"
+          id="areaResponsive">
+
+</map>
 
 <!-- ================= SCRIPT RESPONSIVE ================= -->
 
@@ -1876,7 +2845,7 @@ window.addEventListener("resize", resizeMap);
                
 
 
-                        <!-- ===================== COMIENZA BOTONES ===================== -->
+         <!-- ===================== COMIENZA 3 BOTONES ===================== -->
 
 <div style="
 background:linear-gradient(145deg,#111,#1b1b1b);
@@ -1918,6 +2887,14 @@ font-family:monospace;
 
 </div>
 
+<!-- BOTON DEXSCREENER -->
+<button onclick="abrirDex()" class="btnDex">
+📈 Ver Token en DexScreener
+</button>
+
+<!-- ESPACIO -->
+<div style="height:15px;"></div>
+
 <!-- BOTON BSC -->
 <button onclick="abrirContrato()" class="btnContrato">
 🔗 Ver Contrato en BscScan
@@ -1926,13 +2903,6 @@ font-family:monospace;
 <!-- ESPACIO -->
 <div style="height:15px;"></div>
 
-<!-- BOTON DEXSCREENER -->
-<button onclick="abrirDex()" class="btnDex">
-📈 Ver Token en DexScreener
-</button>
-
-<!-- ESPACIO -->
-<div style="height:15px;"></div>
 
 <!-- BOTON TUTORIAL -->
 <button onclick="abrirTutorial()" class="btnTutorial">
@@ -1943,8 +2913,8 @@ font-family:monospace;
 
 <style>
 
-.btnContrato,
 .btnDex,
+.btnContrato,
 .btnTutorial{
 width:100%;
 max-width:400px;
@@ -1957,19 +2927,6 @@ cursor:pointer;
 transition:all 0.3s ease;
 letter-spacing:0.5px;
 color:white;
-}
-
-/* BOTON BSC */
-
-.btnContrato{
-background:linear-gradient(135deg,#46b51f,#2f7e15);
-box-shadow:0 6px 18px rgba(55,139,24,0.35);
-}
-
-.btnContrato:hover{
-transform:translateY(-3px) scale(1.03);
-box-shadow:0 10px 25px rgba(55,139,24,0.55);
-background:linear-gradient(135deg,#52d323,#378B18);
 }
 
 /* BOTON DEX */
@@ -1985,6 +2942,19 @@ box-shadow:0 10px 25px rgba(24,92,139,0.55);
 background:linear-gradient(135deg,#2790e8,#1c5f9e);
 }
 
+/* BOTON BSC */
+
+.btnContrato{
+background:linear-gradient(135deg,#46b51f,#2f7e15);
+box-shadow:0 6px 18px rgba(55,139,24,0.35);
+}
+
+.btnContrato:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 10px 25px rgba(55,139,24,0.55);
+background:linear-gradient(135deg,#52d323,#378B18);
+}
+
 /* BOTON TUTORIAL */
 
 .btnTutorial{
@@ -1998,8 +2968,8 @@ box-shadow:0 10px 25px rgba(230,126,0,0.55);
 background:linear-gradient(135deg,#ffad33,#ff8c00);
 }
 
-.btnContrato:active,
 .btnDex:active,
+.btnContrato:active,
 .btnTutorial:active{
 transform:scale(0.97);
 }
@@ -2008,19 +2978,19 @@ transform:scale(0.97);
 
 <script>
 
-function abrirContrato(){
+function abrirDex(){
 
 window.open(
-"https://bscscan.com/address/0x75f16b49403712b17f7072baea7ab725f89f5644",
+"https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81",
 "_blank"
 );
 
 }
 
-function abrirDex(){
+function abrirContrato(){
 
 window.open(
-"https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81",
+"https://bscscan.com/address/0x75f16b49403712b17f7072baea7ab725f89f5644",
 "_blank"
 );
 
@@ -2037,7 +3007,8 @@ window.open(
 
 </script>
 
-<!-- ===================== FIN BOTONES ===================== -->
+<!-- ===================== FIN 3 BOTONES ===================== -->
+
 
 
 
@@ -2171,8 +3142,8 @@ function loadVideo(el) {
         <div class="footer-black">
             <div class="left">© Copyright 2026 - All Rights Reserved - Criptovision Marketing Global Ecom</div>
             <div class="right">
-                <a href="https://t.me/nodos_ascensum" target="_blank" rel="noopener noreferrer">Telegram</a>
-                <a href="https://wa.link/tikzvz" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="asm-link-telegram">Telegram</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="asm-link-whatsapp">Whatsapp</a>
                 
             </div>
         </div>
@@ -2189,19 +3160,7 @@ function loadVideo(el) {
     </script>
 
     <!-- FUEGOS ARTIFICIALES (sin causar overflow) -->
-    <style>
-        .firework-star {
-            position: fixed;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.9;
-            mix-blend-mode: screen;
-            box-shadow: 0 0 15px white, 0 0 30px white;
-            z-index: 1000;
-        }
-    </style>
+    
 
     <script>
         const fwColors = ['gold', 'white', '#ffd700', '#ffa500'];
@@ -2235,9 +3194,15 @@ function loadVideo(el) {
         setTimeout(() => p.remove(), duration + 120);
       }
     }
-    setInterval(createFirework, 2500 + Math.random() * 1500);
+    setInterval(createFirework, 10000 + Math.random() * 6000);
     </script>
 
+
+
+
+    <script src="../sistema/01-MIS-DATOS.js"></script>
+    <script src="../sistema/02-ENLACES.js"></script>
+    <script src="../sistema/04-FUEGOS.js"></script>
 
 
 </body>

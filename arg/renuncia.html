@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Renuncia al Contrato y Liquidez</title>
-    <link rel="icon" type="image/png" href="imagenes/pets_universe.png">
+    <link rel="icon" type="image/png" href="../imagenes/pets_universe.png">
 
     <style>
         /* ======= RESET / SEGURIDAD LAYOUT ======= */
@@ -184,13 +184,13 @@
         /* ===================== PIE DE PÁGINA ===================== */
         .footer-top-green {
             background-color: #3a8308;
-            height: 0.5cm;
+            height: 20px;
             width: 100%;
         }
 
         .footer-black {
             background-color: #000;
-            min-height: 2.5cm;
+            min-height: 95px;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -226,7 +226,7 @@
 
         .footer-bottom-green {
             background-color: #3a8308;
-            height: 0.6cm;
+            height: 25px;
             width: 100%;
         }
 
@@ -286,13 +286,33 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
+        /* Ocultar barras en celular horizontal */
+@media screen and (max-width:1000px) and (orientation:landscape) {
+
+    .nav-bar,
+    .green-bar {
+        display:none !important;
+    }
+
+}
+
+@media screen and (max-width:1000px) and (orientation:landscape) {
+
+  .video-box {
+      max-width: 75% !important;
+  }
+
+}
+
+
+
     </style>
 </head>
 
 <body>
 
-              <!-- ===================== ENCABEZADO ===================== -->      
-
+    <!-- ===================== ENCABEZADO ===================== -->
   <div class="top-bar">
     <div class="green-bar"></div>
     <div class="nav-bar">
@@ -309,13 +329,14 @@
       </div>
       <div class="nav-links">
         
-        <a href="contactodemo" target="_blank">Contacto</a>
+        <a href="academia.html" target="_blank">Academia</a>
         <a href="index.html" target="_blank">Ascensum Dao</a>
       </div>
     </div>
   </div>
 
   <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+  
     <main>
         
 
@@ -472,7 +493,7 @@
 
 
 
-        <div style="margin-top:60px;">
+        <div style="margin-top:60px; margin-bottom:50px;">
         <h3>🔹 La blockchain permite verificar gran parte de la información públicamente.</h3>
 
         <p>
@@ -484,6 +505,341 @@
         </div>  
         
         
+
+
+
+                <!-- ===================== VIDEO RESPONSIVE ===================== -->
+
+
+     <div class="video-box"
+     data-video="9tFRfbSu6t0"         
+     style="position:relative;max-width:800px;margin:auto;cursor:pointer;"
+     onclick="loadVideo(this)">
+
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+
+    <!-- Miniatura -->
+    <img src="https://img.youtube.com/vi/9tFRfbSu6t0/hqdefault.jpg"    
+         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+    <!-- Botón Play -->
+    <div class="play-button"></div>
+
+  </div>
+
+</div>
+
+
+
+<style>
+.play-button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:videopulse 1.5s infinite;
+}
+
+.play-button::before {
+  content:'';
+  width:0;
+  height:0;
+  border-left:25px solid white;
+  border-top:15px solid transparent;
+  border-bottom:15px solid transparent;
+}
+
+@keyframes videopulse {
+  0% { transform:translate(-50%,-50%) scale(1); }
+  50% { transform:translate(-50%,-50%) scale(1.1); }
+  100% { transform:translate(-50%,-50%) scale(1); }
+}
+
+/* Fade-in */
+.fade-in {
+  opacity:0;
+  transition:opacity 0.8s ease;
+}
+
+.fade-in.show {
+  opacity:1;
+}
+
+
+</style>
+
+
+
+<script>
+function loadVideo(el) {
+
+  const videoId = el.getAttribute("data-video");
+
+  el.innerHTML = `
+   <div style="position:relative;padding-bottom:56.25%;height:0;">
+
+  <iframe
+    class="ytvideo fade-in"
+    src="https://www.youtube.com/embed/${videoId}?controls=1&rel=0&playsinline=1"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+</div>
+  `;
+
+  setTimeout(() => {
+    el.querySelector(".ytvideo").classList.add("show");
+  }, 100);
+}
+</script>
+
+
+
+         <!-- ===================== FIN DEL VIDEO RESPONSIVE ===================== -->
+
+
+
+
+                            <div style="margin-bottom:10px;">
+                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
+                </div>
+                
+
+                <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
+
+
+                <br>
+                ¿Estás listo para dar el siguiente paso?<br>
+                 Haz click abajo y asegura tu Nodo ahora.<br>
+                </p>
+                
+                
+
+
+<!-- ===================================================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
+<!-- ===================================================== -->
+
+<!--
+PERSONALIZACIÓN RÁPIDA
+
+CAMBIAR POSICIÓN:
+center = centro
+left = izquierda
+right = derecha
+
+CAMBIAR COLOR:
+Busca:
+background: linear-gradient(...)
+
+CAMBIAR TAMAÑO:
+padding: 16px 30px;
+font-size: 18px;
+
+CAMBIAR TEXTO:
+Quiero vender Nodos Ascensum
+
+CAMBIAR LINK:
+Reemplazar TU_LINK_AQUI
+
+-->
+
+
+<!-- CONTENEDOR DEL BOTÓN -->
+<div class="cta-container">
+
+
+    <!-- BOTÓN -->
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
+
+        <!-- TEXTO DEL BOTÓN -->
+        <span>Quiero comprar mi primer Nodo y comenzar</span>
+
+        <!-- FLECHA -->
+        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M5 12h14M13 5l7 7-7 7"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"/>
+        </svg>
+
+    </a>
+
+</div>
+
+<style>
+
+/* ===================================================== */
+/* ================= POSICIÓN BOTÓN ==================== */
+/* ===================================================== */
+
+.cta-container {
+
+    /* CAMBIAR:
+       center = centro
+       left = izquierda
+       right = derecha
+    */
+
+    text-align: center;
+
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* ===================================================== */
+/* ==================== BOTÓN ========================== */
+/* ===================================================== */
+
+.cta-pro {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    /* TAMAÑO BOTÓN */
+    padding: 16px 30px;
+
+    /* TAMAÑO TEXTO */
+    font-size: 18px;
+
+    font-weight: 600;
+    color: #121211;
+
+    /* COLOR BOTÓN */
+    background: linear-gradient(135deg, #00c853, #00e676);
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    /* SOMBRA */
+    box-shadow: 0 10px 25px rgba(0, 200, 83, 0.35);
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: pulse 2.5s infinite;
+}
+
+/* ===================================================== */
+/* ===================== HOVER ========================= */
+/* ===================================================== */
+
+.cta-pro:hover {
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 15px 35px rgba(0, 200, 83, 0.6);
+}
+
+/* ===================================================== */
+/* ===================== CLICK ========================= */
+/* ===================================================== */
+
+.cta-pro:active {
+    transform: scale(0.96);
+}
+
+/* ===================================================== */
+/* ================= FLECHA ANIMADA ==================== */
+/* ===================================================== */
+
+.cta-pro .arrow {
+    transition: transform 0.3s ease;
+}
+
+.cta-pro:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* ===================================================== */
+/* ================= EFECTO PULSE ====================== */
+/* ===================================================== */
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 200, 83, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+    }
+}
+
+/* ===================================================== */
+/* ============== APARECER CON SCROLL ================= */
+/* ===================================================== */
+
+.cta-pro.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+
+<script>
+
+/* ===================================================== */
+/* ========= MOSTRAR BOTÓN AL HACER SCROLL ============ */
+/* ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const botones = document.querySelectorAll(".cta-pro");
+
+function showOnScroll() {
+
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
+        const rect = btn.getBoundingClientRect();
+
+        if (rect.top < trigger) {
+            btn.classList.add("visible");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
+});
+
+</script>
+
+        
+
+
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+
+
+
+
+
+
 
 
 
@@ -505,15 +861,194 @@
                 <div style="margin-top:80px;">
                 <h2>Contrato del Token ASM</h2>
 
-                <p>
-                Este es el contrato oficial del token ASM:<br>
-                0xc16a37ef0066b641a3b64cf892dfde63ecf25f81<br>
-                <br>
-
-                También puedes acceder directamente a su información pública desde DexScreener:<br>
-                https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81
-                </p>
+                
+                <h3>Este es el contrato oficial del token ASM:</h3>
                 </div> 
+
+
+
+
+
+
+                <!-- ===================== COMIENZA BOTON COPIAR ===================== --> 
+
+
+                <div style=" 
+                background:#111; 
+                padding:15px; 
+                border-radius:12px; 
+                text-align:center; 
+                margin-top:20px; 
+                "> 
+
+                <span id="refContrato" style=" 
+                color:#FBFF00; 
+                font-size:16px; 
+                word-break:break-all; 
+                display:block; 
+                margin-bottom:15px; 
+                "> 
+                0xc16a37ef0066b641a3b64cf892dfde63ecf25f81 
+                </span> 
+
+                    
+                <button onclick="copiarContrato()" style=" 
+                background:#378B18; 
+                color:white; 
+                border:none; 
+                padding:12px 25px; 
+                border-radius:8px; 
+                font-size:16px; 
+                cursor:pointer; 
+                font-weight:bold; 
+                transition:0.3s; 
+                "> 
+                📋 Copiar Contrato 
+                </button> 
+
+                <p id="mensajeCopiado" style=" 
+                color:#00ff88; 
+                margin-top:10px; 
+                display:none; 
+                font-weight:bold; 
+                "> 
+                ✅ Contrato copiado correctamente 
+                </p> 
+
+                </div> 
+
+                <script> 
+                function copiarContrato() { 
+
+                const texto = 
+                document.getElementById("refContrato").innerText; 
+                
+                navigator.clipboard.writeText(texto); 
+
+                document.getElementById("mensajeCopiado").style.display = "block"; 
+
+                setTimeout(() => { 
+                document.getElementById("mensajeCopiado").style.display = "none"; 
+                }, 2500); 
+
+                } 
+                </script> 
+
+
+
+
+                <!--===================== FIN DEL BOTON COPIAR ===================== -->
+
+
+
+
+
+                 <div style="margin-top:100px;">
+                <h3>También puedes acceder directamente a su información pública desde DexScreener:</h3>
+                <div>
+                
+
+
+
+
+                                <!-- ===================== COMIENZA BOTON ENVIAR ===================== -->
+
+
+                   <div style="
+background:linear-gradient(145deg,#111,#1b1b1b);
+padding:25px;
+border-radius:18px;
+text-align:center;
+margin-top:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+border:1px solid rgba(255,255,255,0.08);
+width:100%;
+box-sizing:border-box;
+">
+
+<h3 style="
+color:white;
+margin-bottom:18px;
+font-size:22px;
+">
+Acceder a Dexscreener               <!-- ====== Modificar ===== -->
+</h3>
+
+<div style="
+background:#0d0d0d;
+padding:15px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.06);
+margin-bottom:20px;
+">
+
+<span style="
+color:#FBFF00;
+font-size:15px;
+word-break:break-all;
+line-height:1.6;
+font-family:monospace;
+">
+https://dexscreener.com                            <!-- ====== Modificar ===== -->
+</span>
+
+</div>
+
+<button onclick="abrirDex()" class="btnDex">     <!-- ====== Ver ===== -->
+🔗 Ingresar al Dex
+</button>
+
+</div>
+
+<style>
+
+.btnDex{
+width:30%;                       
+max-width:400px;    
+background:linear-gradient(135deg,#46b51f,#2f7e15);
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:all 0.3s ease;
+box-shadow:0 6px 18px rgba(55,139,24,0.35);
+letter-spacing:0.5px;
+}
+
+.btnDex:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 10px 25px rgba(55,139,24,0.55);
+background:linear-gradient(135deg,#52d323,#378B18);
+}
+
+.btnDex:active{
+transform:scale(0.97);
+}
+
+</style>
+
+<script>
+
+function abrirDex(){                   
+
+window.open(
+"https://dexscreener.com/bsc/0xc16a37ef0066b641a3b64cf892dfde63ecf25f81",
+"_blank"
+);
+
+}
+
+</script>
+
+
+
+      <!-- ===================== FIN BOTON ENVIAR ===================== -->
+
+
+
 
 
 
@@ -872,19 +1407,264 @@
                 <!-- ===================== TERMINA LINEA ===================== -->
 
 
-                <div style="margin-top:100px;">
-                <h2>🔹 Como Auditar el Contrato de Ascensum</h2>
                 
 
+                            <div style="margin-bottom:10px;">
+                <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
+                </div>
+                
+
+                <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
+
+
+                <br>
+                ¿Estás listo para dar el siguiente paso?<br>
+                 Haz click abajo y asegura tu Nodo ahora.<br>
+                </p>
+                
+                
+
+
+
+
+<!-- ===================================================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
+<!-- ===================================================== -->
+
+<!--
+PERSONALIZACIÓN RÁPIDA
+
+CAMBIAR POSICIÓN:
+center = centro
+left = izquierda
+right = derecha
+
+CAMBIAR COLOR:
+Busca:
+background: linear-gradient(...)
+
+CAMBIAR TAMAÑO:
+padding: 16px 30px;
+font-size: 18px;
+
+CAMBIAR TEXTO:
+Quiero vender Nodos Ascensum
+
+CAMBIAR LINK:
+Reemplazar TU_LINK_AQUI
+
+-->
+
+
+<!-- CONTENEDOR DEL BOTÓN -->
+<div class="cta-container">
+
+
+    <!-- BOTÓN -->
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
+
+        <!-- TEXTO DEL BOTÓN -->
+        <span>Quiero comprar mi primer Nodo y comenzar</span>
+
+        <!-- FLECHA -->
+        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M5 12h14M13 5l7 7-7 7"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"/>
+        </svg>
+
+    </a>
+
+</div>
+
+<style>
+
+/* ===================================================== */
+/* ================= POSICIÓN BOTÓN ==================== */
+/* ===================================================== */
+
+.cta-container {
+
+    /* CAMBIAR:
+       center = centro
+       left = izquierda
+       right = derecha
+    */
+
+    text-align: center;
+
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* ===================================================== */
+/* ==================== BOTÓN ========================== */
+/* ===================================================== */
+
+.cta-pro {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    /* TAMAÑO BOTÓN */
+    padding: 16px 30px;
+
+    /* TAMAÑO TEXTO */
+    font-size: 18px;
+
+    font-weight: 600;
+    color: #121211;
+
+    /* COLOR BOTÓN */
+    background: linear-gradient(135deg, #00c853, #00e676);
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    /* SOMBRA */
+    box-shadow: 0 10px 25px rgba(0, 200, 83, 0.35);
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: pulse 2.5s infinite;
+}
+
+/* ===================================================== */
+/* ===================== HOVER ========================= */
+/* ===================================================== */
+
+.cta-pro:hover {
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 15px 35px rgba(0, 200, 83, 0.6);
+}
+
+/* ===================================================== */
+/* ===================== CLICK ========================= */
+/* ===================================================== */
+
+.cta-pro:active {
+    transform: scale(0.96);
+}
+
+/* ===================================================== */
+/* ================= FLECHA ANIMADA ==================== */
+/* ===================================================== */
+
+.cta-pro .arrow {
+    transition: transform 0.3s ease;
+}
+
+.cta-pro:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* ===================================================== */
+/* ================= EFECTO PULSE ====================== */
+/* ===================================================== */
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 200, 83, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+    }
+}
+
+/* ===================================================== */
+/* ============== APARECER CON SCROLL ================= */
+/* ===================================================== */
+
+.cta-pro.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+
+<script>
+
+/* ===================================================== */
+/* ========= MOSTRAR BOTÓN AL HACER SCROLL ============ */
+/* ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const botones = document.querySelectorAll(".cta-pro");
+
+function showOnScroll() {
+
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
+        const rect = btn.getBoundingClientRect();
+
+        if (rect.top < trigger) {
+            btn.classList.add("visible");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
+});
+
+</script>
+
+        
+
+
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+
+
+
+
+
+
+
+
+
+
+                <div style="margin-top:100px;">
+                <h2>🔹 Cómo Verificar Ascensum en la Blockchain</h2>
                 <p>
-                Este es el contrato de Ascensum DAO<br>
+                Toda la actividad de Ascensum puede comprobarse públicamente en la blockchain de Binance Smart Chain. Cualquier persona puede verificar la información de forma transparente e independiente.<br>
+                <br>                
+                <h3>Contrato Oficial de Ascensum DAO</h3>
                 0x75f16b49403712b17f7072baea7ab725f89f5644
                 <br>
                 <br>
-                1.- Vamos a https://bscscan.com<br>
-                pega el contrato en el buscador y le das enter
+                <h3>Verificación Manual</h3>
+                1. Ingresa a BscScan.<br>
+                2. Copia el contrato de Ascensum DAO.<br>
+                3. Pégalo en el buscador y presiona Enter.<br>
+                4. Podrás consultar la información pública del contrato directamente en la blockchain.
                 </p>
                 </div>
+
+
+                <p style="margin-top:80px;">
+                Imagen 1</p>
 
 
 
@@ -902,6 +1682,38 @@
                 </div>
 
 
+
+
+
+                 <div style="margin-top:80px; margin-bottom:30px;">
+                <h3>Acceso Directo</h3>
+                <p>Si prefieres ahorrar tiempo, puedes utilizar los siguientes accesos directos:
+                <br>
+                <br>
+                📄 Consulta la información pública del contrato oficial.
+                <br>
+                🔍 Observa una transacción registrada directamente en la blockchain (imagen 4).
+                </p>
+                </div>
+
+
+     <div class="btn-group">
+    <a href="https://bscscan.com/address/0x75f16b49403712b17f7072baea7ab725f89f5644"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-primary">
+       📄 Ver Contrato de Ascensum en BscScan
+    </a>
+        <br>
+        <br>
+    <a href="https://bscscan.com/tx/0x380606954c7aa22578c1b9e60d458901c5b6fb0c31440ab2b57fa3781dfb3ffd"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-success">
+       🔍 Ver una Compra Real de Nodo
+    </a>
+
+</div>
 
 
 
@@ -925,7 +1737,8 @@
 
 
 
-
+                <p style="margin-top:80px;">
+                Imagen 2</p>
                 <div style="margin-top:60px; margin-bottom:80px;">
 
     <img src="../imagenes/bscscan_2.png"
@@ -957,7 +1770,8 @@
 
 
 
-
+                <p style="margin-top:80px;">
+                Imagen 3</p>
                 <div style="margin-top:40px; margin-bottom:80px;">
 
     <img src="../imagenes/bscscan_3.png"
@@ -1000,6 +1814,9 @@
 
 
 
+                <p style="margin-top:80px;">
+                Imagen 4</p>
+
                 <div style="margin-top:40px; margin-bottom:80px;">
 
     <img src="../imagenes/bscscan_4.png"
@@ -1035,6 +1852,9 @@
                 </p>
                 
 
+
+                <p style="margin-top:80px;">
+                Imagen 5</p>
 
                 <div style="margin-top:40px; margin-bottom:80px;">
 
@@ -1190,10 +2010,10 @@
 
 
 
-                <div style="margin-top:80px;">
+            <div style="margin-bottom:10px;">
                 <h2>Estás a una decisión de cambiar tu posición en el mundo cripto</h2>
-
                 </div>
+                
 
                 <p style="text-align:center; font-size:18px; line-height:1.8; max-width:950px; margin:auto;">
 
@@ -1202,12 +2022,15 @@
                 ¿Estás listo para dar el siguiente paso?<br>
                  Haz click abajo y asegura tu Nodo ahora.<br>
                 </p>
-
+                
                 
 
 
+
+
+
 <!-- ===================================================== -->
-<!-- ================= BOTÓN CTA PRO ===================== -->
+<!-- ========== COMIENZA BOTÓN COMPRAR NODO ============== -->
 <!-- ===================================================== -->
 
 <!--
@@ -1234,11 +2057,16 @@ Reemplazar TU_LINK_AQUI
 
 -->
 
+
 <!-- CONTENEDOR DEL BOTÓN -->
 <div class="cta-container">
 
+
     <!-- BOTÓN -->
-    <a href="https://wa.link/tikzvz" target="_blank" rel="noopener noreferrer" class="cta-pro" id="ctaPro">
+    <a target="_blank"
+   rel="noopener noreferrer"
+   class="cta-pro asm-link-comprar">
+
 
         <!-- TEXTO DEL BOTÓN -->
         <span>Quiero comprar mi primer Nodo y comenzar</span>
@@ -1380,21 +2208,27 @@ Reemplazar TU_LINK_AQUI
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const btn = document.getElementById("ctaPro");
+const botones = document.querySelectorAll(".cta-pro");
 
-    function showOnScroll() {
+function showOnScroll() {
 
-        const trigger = window.innerHeight * 0.8;
+    const trigger = window.innerHeight * 0.8;
+
+    botones.forEach(btn => {
+
         const rect = btn.getBoundingClientRect();
 
         if (rect.top < trigger) {
             btn.classList.add("visible");
         }
-    }
 
-    window.addEventListener("scroll", showOnScroll);
+    });
 
-    showOnScroll();
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+showOnScroll();
 });
 
 </script>
@@ -1402,23 +2236,164 @@ document.addEventListener("DOMContentLoaded", function() {
         
 
 
-        <!-- ===================== FIN DEL BOTON ===================== -->
+        <!-- ===================== FIN DEL BOTON COMPRAR NODO ===================== -->
+
+
+
+
+
+
 
 
 
 
         <!-- ===================== COMIENZA LINEA ===================== -->
 
-        <hr style="margin-top:100px; margin-bottom:60px;">
+        <hr style="margin-top:60px; margin-bottom:40px;">
 
         <!-- ===================== TERMINA LINEA ===================== -->
 
 
 
 
+        <div style="margin-bottom:50px;">
+        <h1>Ascensum DAO</h1>
+        <h3>Explora la Seguridad y todo su Potencial</h3>
+     
+        <p>
+        En este video descubrirás qué hace diferente a Ascensum DAO y por qué está despertando el interés de muchas personas dentro del mundo cripto.
+        <br>
+        <br>
+        Analizaremos su seguridad, su modelo de funcionamiento, sus ventajas y los fundamentos que podrían impulsar su crecimiento transformando ASM en la moneda viral del 2026
+        <br>
+        <br>
+        Si alguna vez te preguntaste qué es ASM y por qué no se parece a la mayoría de las criptomonedas del mercado, aquí encontrarás las respuestas.
+        <br>
+        <br>
+        Infórmate, verifica los datos por ti mismo y descubre el potencial que muchos ven en este proyecto.
+        </p>
+        </div>
+       
+   
+
+
+
+
+        <!-- ===================== VIDEO RESPONSIVE ===================== -->
+
+
+     <div class="video-box"
+     data-video="O-ujDzec-bc"         
+     style="position:relative;max-width:800px;margin:auto;cursor:pointer;"
+     onclick="loadVideo(this)">
+
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+
+    <!-- Miniatura -->
+    <img src="https://img.youtube.com/vi/O-ujDzec-bc/hqdefault.jpg"    
+         style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+    <!-- Botón Play -->
+    <div class="play-button"></div>
+
+  </div>
+
+</div>
+
+
+
+<style>
+.play-button {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  background:rgba(0,0,0,0.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:videopulse 1.5s infinite;
+}
+
+.play-button::before {
+  content:'';
+  width:0;
+  height:0;
+  border-left:25px solid white;
+  border-top:15px solid transparent;
+  border-bottom:15px solid transparent;
+}
+
+@keyframes videopulse {
+  0% { transform:translate(-50%,-50%) scale(1); }
+  50% { transform:translate(-50%,-50%) scale(1.1); }
+  100% { transform:translate(-50%,-50%) scale(1); }
+}
+
+/* Fade-in */
+.fade-in {
+  opacity:0;
+  transition:opacity 0.8s ease;
+}
+
+.fade-in.show {
+  opacity:1;
+}
+
+
+</style>
+
+
+
+<script>
+function loadVideo(el) {
+
+  const videoId = el.getAttribute("data-video");
+
+  el.innerHTML = `
+   <div style="position:relative;padding-bottom:56.25%;height:0;">
+
+  <iframe
+    class="ytvideo fade-in"
+    src="https://www.youtube.com/embed/${videoId}?controls=1&rel=0&playsinline=1"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+</div>
+  `;
+
+  setTimeout(() => {
+    el.querySelector(".ytvideo").classList.add("show");
+  }, 100);
+}
+</script>
+
+
+
+        
+
+
+         <!-- ===================== FIN DEL VIDEO RESPONSIVE ===================== -->
+
+
+
+        <!-- ===================== COMIENZA LINEA ===================== -->
+
+        <hr style="margin-top:80px; margin-bottom:60px;">
+
+        <!-- ===================== TERMINA LINEA ===================== -->
+
+
+
                  <!---------  COMIENZA PORTAL ASCENSUM  --------->
 
-<a href="seguridad.html"
+<a href="academia.html"
    target="_blank"
    class="ascensum-portal">
 
@@ -1536,13 +2511,16 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="footer-black">
             <div class="left">© Copyright 2026 - All Rights Reserved - Criptovision Marketing Global Ecom</div>
             <div class="right">
-                <a href="https://t.me/nodos_ascensum" target="_blank" rel="noopener noreferrer">Telegram</a>
-                <a href="https://wa.link/tikzvz" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="asm-link-telegram">Telegram</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="asm-link-whatsapp">Whatsapp</a>
                 
             </div>
         </div>
         <div class="footer-bottom-green"></div>
     </section>
+
+
+
 
     <!-- JS SCROLL EFECTO -->
     <script>
@@ -1553,20 +2531,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     </script>
 
+
+
+
     <!-- FUEGOS ARTIFICIALES (sin causar overflow) -->
-    <style>
-        .firework-star {
-            position: fixed;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.9;
-            mix-blend-mode: screen;
-            box-shadow: 0 0 15px white, 0 0 30px white;
-            z-index: 1000;
-        }
-    </style>
+    
 
     <script>
         const fwColors = ['gold', 'white', '#ffd700', '#ffa500'];
@@ -1600,8 +2569,17 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => p.remove(), duration + 120);
       }
     }
-    setInterval(createFirework, 2500 + Math.random() * 1500);
+    setInterval(createFirework, 10000 + Math.random() * 6000);
     </script>
+
+
+
+
+    <script src="../sistema/01-MIS-DATOS.js"></script>
+    <script src="../sistema/02-ENLACES.js"></script>
+    <script src="../sistema/04-FUEGOS.js"></script>
+
+
 
 </body>
 
