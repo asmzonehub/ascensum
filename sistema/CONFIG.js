@@ -26,6 +26,10 @@ async function cargarConfiguracion() {
 
         ASCENSUM = await respuesta.json();
 
+        console.log(ASCENSUM);
+
+        
+
         // ===========================
         // WHATSAPP
         // ===========================
