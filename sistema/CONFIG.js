@@ -28,12 +28,14 @@ async function cargarConfiguracion() {
 
         console.log(ASCENSUM);
 
-        
+
 
         // ===========================
         // WHATSAPP
         // ===========================
 
+        console.log("Llegué hasta acá");
+        
         WHATSAPP_COMPRAR =
             "https://wa.link/" + ASCENSUM.whatsapp.comprar;
 
