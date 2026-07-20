@@ -2764,58 +2764,8 @@ function loadVideo(el) {
 
 </div>
 
-<map name="image-map">
 
-    <area target="_blank"
-          alt="Vas a seguir dudando"
-          title="Vas a seguir dudando"
-          href="https://wa.link/eck1xi"
-          coords="135,1302,901,1501"
-          shape="rect"
-          id="areaResponsive">
-
-</map>
-
-<!-- ================= SCRIPT RESPONSIVE ================= -->
-
-<script>
-
-const originalWidth = 1024;
-const originalHeight = 1536;
-
-const originalCoords = [135,1302,901,1501];
-
-function resizeMap() {
-
-    const img = document.getElementById("imagenMapa");
-    const area = document.getElementById("areaResponsive");
-
-    const currentWidth = img.clientWidth;
-    const currentHeight = img.clientHeight;
-
-    const scaleX = currentWidth / originalWidth;
-    const scaleY = currentHeight / originalHeight;
-
-    const newCoords = [
-
-        Math.round(originalCoords[0] * scaleX),
-        Math.round(originalCoords[1] * scaleY),
-
-        Math.round(originalCoords[2] * scaleX),
-        Math.round(originalCoords[3] * scaleY)
-
-    ];
-
-    area.coords = newCoords.join(",");
-}
-
-window.addEventListener("load", resizeMap);
-window.addEventListener("resize", resizeMap);
-
-</script>
-
-<!-- ================= FIN ================= -->
-
+<!-- ================= FIN IMAGEN RESPONSIVE CON ÁREA CLICKEABLE ELIMINADA ================= -->
             
            
                 
